@@ -1,6 +1,12 @@
 # AWS Secured Static Website Terraform Module
 Terraform module that creates everything you need to run secured static site.
 
+The module creates the following:
+- S3 bucket for static website assets
+- CloudFront distribution
+- Route53 alias records to the CloudFront distribution 
+
+
 ## Usage
 ```
 module "website" {
