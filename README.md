@@ -10,7 +10,8 @@ The module creates the following:
 ## Usage
 ```
 module "website" {
-    source = "./module"
+    source  = "AlexanderRMcNeill/secured-static-website/aws"
+    version = "1.0.0"
 
     bucket_name = "my-website-bucket"
 
