@@ -39,6 +39,22 @@ module "website" {
 }
 ```
 
+## Single Page Applications
+To setup the distribution for a single page application set the `custom_error_response_objects` attibute to the following:
+
+```hcl
+custom_error_response_objects = [
+    {
+        error_code = "404"
+        error_caching_min_ttl = 0
+        response_code = "200"
+        response_page_path = "/index.html"
+    }
+}
+```
+
+This configuration will catch the 404 from s3 and render `index.html` on that path with a status code of 200.
+
 ## Authors
 Module managed by [Alexander McNeill](https://github.com/AlexanderRMcNeill)
 
