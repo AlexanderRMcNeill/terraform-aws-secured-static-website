@@ -6,6 +6,7 @@ The module creates the following:
 - CloudFront distribution
 - Route53 alias records to the CloudFront distribution 
 
+**Note: If you create your infrastructure in a region other than us-east-1 you will get a temporary redirection response for about an hour, this is because the global s3 bucket domain is still propagating. See [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/Redirects.html#TemporaryRedirection) for more details.**
 
 ## Usage
 ```
@@ -37,8 +38,6 @@ module "website" {
     ]
 }
 ```
-
-## Examples
 
 ## Authors
 Module managed by [Alexander McNeill](https://github.com/AlexanderRMcNeill)
